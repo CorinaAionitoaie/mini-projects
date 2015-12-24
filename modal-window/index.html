@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<head>
+		<title>Magic Dialog Box</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="modal-window" class="modal-dialog">
+			<a href="#close" class="close-button">X</a>
+
+		<div class="modal-dialog__header">
+			<span class="modal-dialog__title">Add Product</span>
+			<span class="modal-dialog__subtitle">Second-hand Car</span>
+			<span class="modal-dialog__category">Automobiles</span>
+		</div>
+
+		<div class="modal-dialog__section">
+			<div class="modal-dialog__section--1">
+				<label for="announcement-title">Title of announcement</label><input id="announcement-title" type="text" placeholder="Title of announcement" />
+				<label for="brand">Make/Brand</label><input id="brand" type="text" placeholder="Make/Brand" />
+				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" type="number" value="2015" />
+				<label for="mileage">Mileage</label><input id="mileage" type="number" value="1000" />
+				<label for="fuel-type">Fuel type</label><select id="fuel-type">
+					<option value="">Please select a fuel type</option>
+					<option value="battery-e">Battery Electric</option>
+					<option value="hybrid-pi">Plug-in Hybrid</option>
+					<option value="hybrid-e">Hybrid Electric</option>
+					<option value="hydrogen-fc">Hydrogen Fuel Cell</option>
+					<option value="ice">Hydrogen Internal Combustion Engine(ICE)</option>
+					<option value="cng">Compressed Natural Gas(CNG)</option>
+					<option value="ethanol">Ethanol(E85)</option>
+					<option value="biodiesel">Biodiesel</option>
+					<option value="propane">Propane</option>
+					<option value="gasoline">Gasoline</option>
+					<option value="diesel">Diesel</option>
+				</select>
+				<label for="color">Color</label><input type="text" class="color-picker" onInput="pickColor();" placeholder="color code goes here" />
+				<svg width="30" height="30">	  
+				  <rect width="30" height="30" class="color-square"/>
+				</svg>
+			</div>
+			<div class="modal-dialog__section--2"></div>
+		</div>
+
+
+			
+
+		</div>
+
+		<a href="#modal-window">Open Modal</a>		
+		<script src="color-render.js"></script>
+	</body>
+</html>
