@@ -79,7 +79,6 @@
     height: auto;
     position: relative;
     color: #778899;
-   /* padding: 10px 0;*/
     overflow: hidden;
     font-size: 18px;
     line-height: 18px;
@@ -101,7 +100,7 @@
 .modal-dialog__section select, 
 .modal-dialog__section textarea {
     display: block;
-    width: 300px;
+    width: 250px;
     margin: 0;
     border: 0;
     padding: 10px 0 5px 0;
@@ -117,12 +116,22 @@
     opacity: 0.2
 }
 
+.modal-dialog__section input:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
 .modal-dialog__color-preview {
 	float: left;
     padding: 10px;
     width: 100%;
 }
 
+.modal-dialog__brand-logo {
+    float: left;
+    height: 30px;
+}
 .modal-dialog__section--2 #vehicle-damaged{
     width: 20px;
     height: 30px;
@@ -158,18 +167,14 @@
     color: white;  
 }
 
-#damage-reason, label[for="damage-reason"] {
+.modal-dialog__damage-details {
     display: none;
+}
+
+.modal-dialog__section .modal-dialog__damage-details--displayed {
+    display: block;
 }
 
 label[for="vehicle-damaged"] {
     display: block;
 }
-
-
-#D37F75
-F9B6AE
-FF7260
-FB7947
-
-3A3A3C niiice

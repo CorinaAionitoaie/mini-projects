@@ -10,3 +10,13 @@ var pickColor = function() {
 		}
 	}
 };
+
+document.querySelector('#vehicle-damaged').addEventListener('change', function(e){
+    var damageDetails = document.getElementsByClassName('modal-dialog__damage-details');
+    console.log(damageDetails.length);
+   for(var i=0; i< damageDetails.length; i++) {
+        var detail = damageDetails[i];
+        console.log(detail, i);
+        damageDetails[i].className += ' modal-dialog__damage-details--displayed';
+    }
+});

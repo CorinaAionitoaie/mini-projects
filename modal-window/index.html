@@ -21,6 +21,7 @@
 			<div class="modal-dialog__section modal-dialog__section--1">
 				<label for="announcement-title">Title of announcement</label><input id="announcement-title" type="text" placeholder="Title of announcement" />
 				<label for="brand">Make/Brand</label><select id="brand"></select>
+                <img src="" class="modal-dialog__brand-logo" />
 				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" type="text" placeholder="2015" />
 				<label for="mileage">Mileage</label><input id="mileage" type="text" placeholder="1000" />
 				<label for="fuel-type">Fuel type</label><select id="fuel-type">
@@ -43,7 +44,7 @@
 			</div>
 			<div class="modal-dialog__section modal-dialog__section--2">
 				<label for="vehicle-damaged">Vehicle damaged</label><input id="vehicle-damaged" type="checkbox" />
-				<label for="damage-reason">Please suply more details</label><textarea id="damage-reason" rows="5" cols="30" spellcheck="true" placeholder="Damage details"></textarea>
+				<label for="damage-reason" class="modal-dialog__damage-details">Please suply more details</label><textarea id="damage-reason" rows="5" cols="30" spellcheck="true" class="modal-dialog__damage-details" placeholder="Damage details"></textarea>
 				<label for="price">Price</label><input id="price" type="text" placeholder="1000" />
 				<label for="currency">Currency</label><select id="currency">
 					<option value="usd">USD</option>
@@ -63,5 +64,6 @@
 
 		<a href="#modal-window">Open Modal</a>		
 		<script src="color-render.js"></script>
+        <script src="carBrandsLoader.js"></script>
 	</body>
 </html>
