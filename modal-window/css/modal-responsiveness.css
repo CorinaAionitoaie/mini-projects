@@ -1,0 +1,50 @@
+@media screen and (min-width: 640px) {
+     .modal-dialog__section {
+        width: 50%;
+    }
+    
+    .modal-dialog__section label {
+        display: block;
+        padding-left: 10px;
+    }
+    .modal-dialog__section--1 {
+        display: block;
+        float: left;
+    }
+
+    .modal-dialog__section--2 {
+        float: right;
+    }
+    
+    .modal-dialog__section--2 #vehicle-damaged {
+        display: block;
+    }
+    
+    .modal-dialog__form {
+        padding: 10px 0;
+    }
+    .modal-dialog__section input, 
+    .modal-dialog__section select, 
+    .modal-dialog__section textarea {
+        margin-left: 10px;
+        float: left;
+        display: inline-block;
+    }
+    
+    #damage-reason, label[for="damage-reason"] {
+        display: none;
+    }
+    
+    .modal-dialog__color-preview {
+        width: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .modal-dialog__section input, 
+    .modal-dialog__section select, 
+    .modal-dialog__section textarea {
+        margin-left: 0;
+    }
+}

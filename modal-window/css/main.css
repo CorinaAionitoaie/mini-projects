@@ -79,25 +79,28 @@
     height: auto;
     position: relative;
     color: #778899;
-    padding: 10px 0;
+   /* padding: 10px 0;*/
     overflow: hidden;
     font-size: 18px;
     line-height: 18px;
 }
 
 .modal-dialog__section {
-    width: 50%;    
+    width: 100%;    
 }
 .modal-dialog__section label {
 	float: left;
 	clear: both;
     width: 200px;
 	max-width: 200px;
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 10px 0;
+    display: none;
 }
 
-.modal-dialog__section input, select, textarea {
-	float: left;
+.modal-dialog__section input, 
+.modal-dialog__section select, 
+.modal-dialog__section textarea {
+    display: block;
     width: 300px;
     margin: 0;
     border: 0;
@@ -106,25 +109,25 @@
     border-bottom: #3A3A3C 1px solid;
     color: #3A3A3C;
 }
-.modal-dialog__section--1 {
-    display: block;
-    float: left;
-}
 
-.modal-dialog__section--2 {
-    float: right;
+.modal-dialog__section input:hover, 
+.modal-dialog__section select:hover, 
+.modal-dialog__section textarea:hover {
+    background-color: #A9DDD9;
+    opacity: 0.2
 }
 
 .modal-dialog__color-preview {
 	float: left;
-    padding: 10px;    
+    padding: 10px;
+    width: 100%;
 }
 
 .modal-dialog__section--2 #vehicle-damaged{
     width: 20px;
     height: 30px;
     margin: 5px 5px 5px 0;
-        
+    display: inline;
 }
 
 .modal-dialog__footer {
@@ -154,6 +157,15 @@
     background-color: #bcbcbc;
     color: white;  
 }
+
+#damage-reason, label[for="damage-reason"] {
+    display: none;
+}
+
+label[for="vehicle-damaged"] {
+    display: block;
+}
+
 
 #D37F75
 F9B6AE
