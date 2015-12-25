@@ -1,0 +1,141 @@
+/**** Show/Hide modal ****/
+
+#modal-window:target {
+	display: block;
+}
+
+#modal-window {
+	display: none;
+}
+
+/**** Common styles ****/
+
+input, select, textarea {
+	float: left;
+}
+
+svg {
+	float: left;
+}
+
+/**** Styling for modal ****/
+
+.modal-dialog {
+	max-width: 1120px;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    border: #5bc0de 1px solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: snow;
+}
+
+.modal-dialog__close{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 2px;
+    line-height: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.modal-dialog__close:hover {
+    background-color: #ff7260;
+}
+
+.modal-dialog__header {
+	background-color: #5bc0de;
+    color: snow;
+    position: relative;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.modal-dialog__title {
+    font-size: 30px;
+    margin: 0;
+    padding: 10px 5px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modal-dialog__subtitle {
+    padding: 0 5px 10px 10px;
+    font-size: 24px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 500;
+}
+
+.modal-dialog__category {
+    padding: 0 5px 0 10px;
+    font-style: oblique;
+}
+
+.modal-dialog__category-img {
+    width: 75px;
+}
+.modal-dialog__form {
+	width: 100%;
+    height: auto;
+    position: relative;
+    color: #778899;
+    padding: 10px 0;
+}
+
+.modal-dialog__section label {
+	float: left;
+	clear: both;
+	min-width: 200px;
+    padding: 5px 10px;
+}
+
+.modal-dialog__section--1 {
+    display: block;
+}
+
+.modal-dialog__section--2 {
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.modal-dialog__footer {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.modal-dialog__button {
+	float: left;
+    width: 100px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 4px;
+    line-height: 35px;
+    margin: 5px;
+    text-align: center;
+}
+
+.modal-dialog__button--save {
+	clear: both;
+    background-color: #5bc0de;
+    color: white;    
+}
+
+.modal-dialog__button--cancel {
+    background-color: #bcbcbc;
+    color: white;  
+}
+#D37F75
+F9B6AE
+FF7260
+FB7947
