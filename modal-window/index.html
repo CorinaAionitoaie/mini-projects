@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 	<head>
 		<title>Magic Dialog Box</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/color-preview.css">
 	</head>
 	<body>
 		<div id="modal-window" class="modal-dialog">
-			<a href="#close" class="close-button">X</a>
+			<a href="#close" class="modal-dialog__close">x</a>
 
 		<div class="modal-dialog__header">
-			<span class="modal-dialog__title">Add Product</span>
-			<span class="modal-dialog__subtitle">Second-hand Car</span>
+			<h1 class="modal-dialog__title">Add Product</h1>
+			<h2 class="modal-dialog__subtitle">Second-hand Car</h2>
 			<span class="modal-dialog__category">Automobiles</span>
+            <img src="images/car-logo.png" class="modal-dialog__category-img" />
 		</div>
 
-		<div class="modal-dialog__section">
-			<div class="modal-dialog__section--1">
+		<div class="modal-dialog__form">
+			<div class="modal-dialog__section modal-dialog__section--1">
 				<label for="announcement-title">Title of announcement</label><input id="announcement-title" type="text" placeholder="Title of announcement" />
-				<label for="brand">Make/Brand</label><input id="brand" type="text" placeholder="Make/Brand" />
-				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" type="number" value="2015" />
-				<label for="mileage">Mileage</label><input id="mileage" type="number" value="1000" />
+				<label for="brand">Make/Brand</label><select id="brand"></select>
+				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" type="text" placeholder="2015" />
+				<label for="mileage">Mileage</label><input id="mileage" type="text" placeholder="1000" />
 				<label for="fuel-type">Fuel type</label><select id="fuel-type">
-					<option value="">Please select a fuel type</option>
 					<option value="battery-e">Battery Electric</option>
 					<option value="hybrid-pi">Plug-in Hybrid</option>
 					<option value="hybrid-e">Hybrid Electric</option>
@@ -31,18 +33,30 @@
 					<option value="biodiesel">Biodiesel</option>
 					<option value="propane">Propane</option>
 					<option value="gasoline">Gasoline</option>
-					<option value="diesel">Diesel</option>
+					<option value="diesel" selected>Diesel</option>
 				</select>
-				<label for="color">Color</label><input type="text" class="color-picker" onInput="pickColor();" placeholder="color code goes here" />
-				<svg width="30" height="30">	  
-				  <rect width="30" height="30" class="color-square"/>
+				<label for="color">Color</label><input id="color" type="text" class="modal-dialog__color-input" onInput="pickColor();" placeholder="car color" />
+				<svg width="20" height="20" class="modal-dialog__color-preview">	  
+				  <rect width="20" height="20" class="color-square"/>
 				</svg>
 			</div>
-			<div class="modal-dialog__section--2"></div>
+			<div class="modal-dialog__section modal-dialog__section--2">
+				<label for="vehicle-damaged">Vehicle damaged</label><input id="vehicle-damaged" type="checkbox" />
+				<label for="damage-reason">Please suply more details</label><textarea id="damage-reason" rows="5" cols="30" spellcheck="true" placeholder="Damage details"></textarea>
+				<label for="price">Price</label><input id="price" type="text" placeholder="1000" />
+				<label for="currency">Currency</label><select id="currency">
+					<option value="usd">USD</option>
+					<option value="eur" selected>EUR</option>
+					<option value="gbp">GBP</option>
+					<option value="ron">RON</option>
+				</select>
+				<label for="vehicle-description">Description</label><textarea id="vehicle-description" rows="5" cols="30" spellcheck="true" placeholder="Description"></textarea>
+			</div>
 		</div>
-
-
-			
+        <div class="modal-dialog__footer">
+            <span class="modal-dialog__button modal-dialog__button--save" />Save</span>
+            <span class="modal-dialog__button modal-dialog__button--cancel" />Cancel</span>
+        </div>
 
 		</div>
 

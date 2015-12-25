@@ -1,5 +1,5 @@
 var pickColor = function() {
-	var colorInput = document.getElementsByClassName("color-picker")[0];
+	var colorInput = document.getElementsByClassName("modal-dialog__color-input")[0];
 	var colorSquare = document.getElementsByClassName("color-square")[0];
 	
 	if(colorInput && colorSquare) {		

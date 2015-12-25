@@ -8,23 +8,12 @@
 	display: none;
 }
 
-/**** Common styles ****/
-
-input, select, textarea {
-	float: left;
-}
-
-svg {
-	float: left;
-}
-
 /**** Styling for modal ****/
 
 .modal-dialog {
 	max-width: 1120px;
     position: relative;
     height: auto;
-    overflow: auto;
     border: #5bc0de 1px solid;
     border-radius: 5px;
     margin: 0 auto;
@@ -91,27 +80,57 @@ svg {
     position: relative;
     color: #778899;
     padding: 10px 0;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 18px;
 }
 
+.modal-dialog__section {
+    width: 50%;    
+}
 .modal-dialog__section label {
 	float: left;
 	clear: both;
-	min-width: 200px;
-    padding: 5px 10px;
+    width: 200px;
+	max-width: 200px;
+    padding: 10px 0 10px 10px;
 }
 
+.modal-dialog__section input, select, textarea {
+	float: left;
+    width: 300px;
+    margin: 0;
+    border: 0;
+    padding: 10px 0 5px 0;
+    background-color: transparent;
+    border-bottom: #3A3A3C 1px solid;
+    color: #3A3A3C;
+}
 .modal-dialog__section--1 {
     display: block;
+    float: left;
 }
 
 .modal-dialog__section--2 {
-    padding-left: 20px;
-    display: inline-block;
+    float: right;
+}
+
+.modal-dialog__color-preview {
+	float: left;
+    padding: 10px;    
+}
+
+.modal-dialog__section--2 #vehicle-damaged{
+    width: 20px;
+    height: 30px;
+    margin: 5px 5px 5px 0;
+        
 }
 
 .modal-dialog__footer {
     max-width: 220px;
     margin: 0 auto;
+    min-height: 45px;
 }
 
 .modal-dialog__button {
@@ -135,7 +154,10 @@ svg {
     background-color: #bcbcbc;
     color: white;  
 }
+
 #D37F75
 F9B6AE
 FF7260
 FB7947
+
+3A3A3C niiice
