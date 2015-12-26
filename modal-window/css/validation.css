@@ -1,26 +1,32 @@
-/*input:required:invalid:focus {
-    border-color: blue;
-}
-input:required:invalid {
-      border-color: #ff7260;
-      border-width: 2px;
-      border-style: solid;
-    border-radius: 4px;
-  }
-input:required:valid {
-    border-color: green;
-    border-width: 2px;
-    border-style: solid;
-}*/
-
-.modal-dialog__form .modal-dialog__section__input:focus:invalid {
+.modal-dialog__form .modal-dialog__section__input:focus:invalid,
+.modal-dialog__form .modal-dialog__section__input[validity="invalid"]:focus {
     box-shadow: 0 0 5px #ff7260;
     border: #ff7260 2px solid;
     outline: none;
+    background: url(../images/invalid21x21.png) no-repeat 98% center;
 }
 
-.modal-dialog__form .modal-dialog__section__input:focus:valid {
+.modal-dialog__form .modal-dialog__section__input:focus {
+    border-radius: 4px;
+}
+
+.modal-dialog__form .modal-dialog__section__input:focus:valid,
+.modal-dialog__form .modal-dialog__section__input[validity="valid"]:focus {
     box-shadow: 0 0 5px #538312;
-    border: #538312; 2px solid;
+    border: #538312 2px solid;
     outline: none;
+}
+
+.modal-dialog__form .modal-dialog__section__input:valid,
+.modal-dialog__form .modal-dialog__section__input[validity="valid"] {
+     background: url(../images/valid19x19.png) no-repeat 98% center;
+}
+
+.modal-dialog__form select.modal-dialog__section__input:valid,
+.modal-dialog__form select.modal-dialog__section__input:focus:valid  {
+    background: none;
+}
+
+.modal-dialog__form input[type="checkbox"].modal-dialog__section__input:focus {
+    box-shadow: none;
 }

@@ -73,8 +73,3 @@
     
 })(this.carBrandsLoader = {});
 
-
-document.addEventListener('DOMContentLoaded', function(){
-    carBrandsLoader.init('#brand', '.modal-dialog__brand-logo');
- });
-
