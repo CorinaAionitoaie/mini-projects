@@ -17,7 +17,6 @@
     border: #5bc0de 1px solid;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 20px;
     background-color: snow;
 }
 
@@ -126,7 +125,9 @@
     float: left;
     height: 30px;
     padding-left: 10px;
+    display: none;
 }
+
 .modal-dialog__section--2 #vehicle-damaged{
     width: 20px;
     height: 30px;
@@ -162,6 +163,7 @@
     background-color: #bcbcbc;
     color: white;  
 }
+
 .modal-dialog__damage-details, label[for="damage-reason"] {
     display: none;
 }
@@ -171,5 +173,40 @@
 }
 
 label[for="vehicle-damaged"] {
+    display: block;
+}
+
+.color-square {
+	fill: none;
+}
+
+body {
+    background: url('../images/bg.jpg');
+}
+
+.overlay {
+    padding: 10%;
+}
+
+.open-modal {
+    width: 100%;
+    position: absolute;
+    top: 50%;    
+}
+
+.open-modal__button {
+    width: 153px;
+    height: 45px;
+    color: #F9B6AE;
+    text-decoration: none;
+    background-color: snow;
+    border-radius: 5px;
+    border-color: #F9B6AE;
+    border-width: 1px;
+    border-style: solid;
+    line-height: 45px;
+    margin: 0 auto;
+    font-size: 28px;
+    padding: 20px;
     display: block;
 }

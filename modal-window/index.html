@@ -3,92 +3,95 @@
 		<title>Magic Dialog Box</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/color-preview.css">
         <link rel="stylesheet" type="text/css" href="css/modal-responsiveness.css">  
         <link rel="stylesheet" type="text/css" href="css/validation.css">
 	</head>
 	<body>
-		<div id="modal-window" class="modal-dialog">
-			<a href="#close" class="modal-dialog__close">x</a>
+        <div class="open-modal">
+            <a href="#modal-window" class="open-modal__button">Open Modal</a>
+        </div>
+        <div class="overlay">
+            <div id="modal-window" class="modal-dialog">
+                <a href="#close" class="modal-dialog__close">x</a>
 
-		<div class="modal-dialog__header">
-			<h1 class="modal-dialog__title">Add Product</h1>
-			<h2 class="modal-dialog__subtitle">Second-hand Car</h2>
-			<span class="modal-dialog__category">Automobiles</span>
-            <img src="images/car-logo.png" class="modal-dialog__category-img" />
-		</div>
-
-		<form class="modal-dialog__form">
-			<div class="modal-dialog__section modal-dialog__section--1">
-				<label for="announcement-title">Title of announcement</label>
-                <input id="announcement-title" class="modal-dialog__section__input" type="text" placeholder="Title of announcement" required/>
-				
-                <label for="brand">Make/Brand</label>
-                <select id="brand" class="modal-dialog__section__input" required></select>
-                <img src="" class="modal-dialog__brand-logo" />
-				
-                <label for="manufacturing-year">Manufacturing year</label>
-                <input id="manufacturing-year" class="modal-dialog__section__input" type="text" placeholder="Manufacturing year" validation-type="year-validation" required/>
-				
-                <label for="mileage">Mileage</label>
-                <input id="mileage" class="modal-dialog__section__input" type="text" placeholder="Mileage" validation-type="integer-validation" required/>
-				
-                <label for="fuel-type">Fuel type</label>
-                <select id="fuel-type" class="modal-dialog__section__input" required>
-					<option value="battery-e">Battery Electric</option>
-					<option value="hybrid-pi">Plug-in Hybrid</option>
-					<option value="hybrid-e">Hybrid Electric</option>
-					<option value="hydrogen-fc">Hydrogen Fuel Cell</option>
-					<option value="ice">Hydrogen Internal Combustion Engine(ICE)</option>
-					<option value="cng">Compressed Natural Gas(CNG)</option>
-					<option value="ethanol">Ethanol(E85)</option>
-					<option value="biodiesel">Biodiesel</option>
-					<option value="propane">Propane</option>
-					<option value="gasoline">Gasoline</option>
-					<option value="diesel" selected>Diesel</option>
-				</select>
-                
-				<label for="color">Color</label>
-                <input id="color" class="modal-dialog__section__input modal-dialog__color-input" type="text" onInput="pickColor();" placeholder="Car color" required/>
-				<svg width="20" height="20" class="modal-dialog__color-preview">	  
-				  <rect width="20" height="20" class="color-square"/>
-				</svg>
-			</div>
-            
-			<div class="modal-dialog__section modal-dialog__section--2">
-				<label for="vehicle-damaged">Vehicle damaged</label>
-                <input id="vehicle-damaged" class="modal-dialog__section__input" type="checkbox"  />
-                
-				<label for="damage-reason" class="modal-dialog__damage-details">Please suply more details</label>
-                <textarea id="damage-reason" class="modal-dialog__damage-details modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Damage details" validation-type="damage-details"></textarea>
-                
-				<label for="price">Price</label>
-                <input id="price" class="modal-dialog__section__input" type="text" placeholder="Price" validation-type="decimal-validation" required/>
-                
-                <label for="currency">Currency</label>
-                <select id="currency" class="modal-dialog__section__input" required>
-					<option value="usd">USD</option>
-					<option value="eur" selected>EUR</option>
-					<option value="gbp">GBP</option>
-					<option value="ron">RON</option>
-				</select>
-                
-				<label for="vehicle-description">Description</label>
-                <textarea id="vehicle-description" class="modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Description" required></textarea>
-                
-			</div>
-            <div class="modal-dialog__footer">
-                <input type="submit" value="Save" class="modal-dialog__button modal-dialog__button--save" />
-                <span class="modal-dialog__button modal-dialog__button--cancel" />Cancel</span>
+            <div class="modal-dialog__header">
+                <h1 class="modal-dialog__title">Add Product</h1>
+                <h2 class="modal-dialog__subtitle">Second-hand Car</h2>
+                <span class="modal-dialog__category">Automobiles</span>
+                <img src="images/car-logo.png" class="modal-dialog__category-img" />
             </div>
-		</form>
 
-		</div>
+            <form class="modal-dialog__form">
+                <div class="modal-dialog__section modal-dialog__section--1">
+                    <label for="announcement-title">Title of announcement</label>
+                    <input id="announcement-title" class="modal-dialog__section__input" type="text" placeholder="Title of announcement" required/>
 
-		<a href="#modal-window">Open Modal</a>		
+                    <label for="brand">Make/Brand</label>
+                    <select id="brand" class="modal-dialog__section__input" required></select>
+                    <img src="" class="modal-dialog__brand-logo" />
+
+                    <label for="manufacturing-year">Manufacturing year</label>
+                    <input id="manufacturing-year" class="modal-dialog__section__input" type="text" placeholder="Manufacturing year" validation-type="year-validation" required/>
+
+                    <label for="mileage">Mileage</label>
+                    <input id="mileage" class="modal-dialog__section__input" type="text" placeholder="Mileage" validation-type="integer-validation" required/>
+
+                    <label for="fuel-type">Fuel type</label>
+                    <select id="fuel-type" class="modal-dialog__section__input" required>
+                        <option value="battery-e">Battery Electric</option>
+                        <option value="hybrid-pi">Plug-in Hybrid</option>
+                        <option value="hybrid-e">Hybrid Electric</option>
+                        <option value="hydrogen-fc">Hydrogen Fuel Cell</option>
+                        <option value="ice">Hydrogen Internal Combustion Engine(ICE)</option>
+                        <option value="cng">Compressed Natural Gas(CNG)</option>
+                        <option value="ethanol">Ethanol(E85)</option>
+                        <option value="biodiesel">Biodiesel</option>
+                        <option value="propane">Propane</option>
+                        <option value="gasoline">Gasoline</option>
+                        <option value="diesel" selected>Diesel</option>
+                    </select>
+
+                    <label for="color">Color</label>
+                    <input id="color" class="modal-dialog__section__input modal-dialog__color-input" type="text" onInput="pickColor();" placeholder="Car color" required/>
+                    <svg width="20" height="20" class="modal-dialog__color-preview">	  
+                      <rect width="20" height="20" class="color-square"/>
+                    </svg>
+                </div>
+
+                <div class="modal-dialog__section modal-dialog__section--2">
+                    <label for="vehicle-damaged">Vehicle damaged</label>
+                    <input id="vehicle-damaged" class="modal-dialog__section__input" type="checkbox"  />
+
+                    <label for="damage-reason" class="modal-dialog__damage-details">Please suply more details</label>
+                    <textarea id="damage-reason" class="modal-dialog__damage-details modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Damage details" validation-type="damage-details"></textarea>
+
+                    <label for="price">Price</label>
+                    <input id="price" class="modal-dialog__section__input" type="text" placeholder="Price" validation-type="decimal-validation" required/>
+
+                    <label for="currency">Currency</label>
+                    <select id="currency" class="modal-dialog__section__input" required>
+                        <option value="usd">USD</option>
+                        <option value="eur" selected>EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="ron">RON</option>
+                    </select>
+
+                    <label for="vehicle-description">Description</label>
+                    <textarea id="vehicle-description" class="modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Description" required></textarea>
+
+                </div>
+                <div class="modal-dialog__footer">
+                    <input type="submit" value="Save" class="modal-dialog__button modal-dialog__button--save" />
+                    <span class="modal-dialog__button modal-dialog__button--cancel" />Cancel</span>
+                </div>
+            </form>
+            </div>
+        </div>
+	
 		<script src="scripts/color-render.js"></script>
         <script src="scripts/carBrandsLoader.js"></script>
         <script src="scripts/form-validator.js"></script>
         <script src="scripts/main.js"></script>
+        
 	</body>
 </html>

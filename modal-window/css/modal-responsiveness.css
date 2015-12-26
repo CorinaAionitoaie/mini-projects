@@ -43,6 +43,12 @@
     }
 }
 
+@media screen and (min-width: 960px) {
+   .modal-dialog__brand-logo {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 1025px) {
     .modal-dialog__section input, 
     .modal-dialog__section select, 
