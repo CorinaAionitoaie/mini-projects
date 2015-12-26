@@ -1,0 +1,26 @@
+/*input:required:invalid:focus {
+    border-color: blue;
+}
+input:required:invalid {
+      border-color: #ff7260;
+      border-width: 2px;
+      border-style: solid;
+    border-radius: 4px;
+  }
+input:required:valid {
+    border-color: green;
+    border-width: 2px;
+    border-style: solid;
+}*/
+
+.modal-dialog__form .modal-dialog__section__input:focus:invalid {
+    box-shadow: 0 0 5px #ff7260;
+    border: #ff7260 2px solid;
+    outline: none;
+}
+
+.modal-dialog__form .modal-dialog__section__input:focus:valid {
+    box-shadow: 0 0 5px #538312;
+    border: #538312; 2px solid;
+    outline: none;
+}

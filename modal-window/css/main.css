@@ -85,7 +85,8 @@
 }
 
 .modal-dialog__section {
-    width: 100%;    
+    width: 100%;
+    padding-bottom: 10px;
 }
 .modal-dialog__section label {
 	float: left;
@@ -96,9 +97,7 @@
     display: none;
 }
 
-.modal-dialog__section input, 
-.modal-dialog__section select, 
-.modal-dialog__section textarea {
+.modal-dialog__section__input {
     display: block;
     width: 250px;
     margin: 0;
@@ -109,14 +108,8 @@
     color: #3A3A3C;
 }
 
-.modal-dialog__section input:hover, 
-.modal-dialog__section select:hover, 
-.modal-dialog__section textarea:hover {
-    background-color: #A9DDD9;
-    opacity: 0.2
-}
-
-.modal-dialog__section input:focus {
+.modal-dialog__section__input:focus {
+    background-color: rgba(169, 221, 217, 0.2);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -131,6 +124,7 @@
 .modal-dialog__brand-logo {
     float: left;
     height: 30px;
+    padding-left: 10px;
 }
 .modal-dialog__section--2 #vehicle-damaged{
     width: 20px;
@@ -159,19 +153,19 @@
 .modal-dialog__button--save {
 	clear: both;
     background-color: #5bc0de;
-    color: white;    
+    color: white; 
+    border: none;
 }
 
 .modal-dialog__button--cancel {
     background-color: #bcbcbc;
     color: white;  
 }
-
-.modal-dialog__damage-details {
+.modal-dialog__damage-details, label[for="damage-reason"] {
     display: none;
 }
 
-.modal-dialog__section .modal-dialog__damage-details--displayed {
+#vehicle-damaged:checked ~ textarea.modal-dialog__damage-details  {
     display: block;
 }
 

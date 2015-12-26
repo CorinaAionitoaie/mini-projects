@@ -4,7 +4,8 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/color-preview.css">
-        <link rel="stylesheet" type="text/css" href="css/modal-responsiveness.css">        
+        <link rel="stylesheet" type="text/css" href="css/modal-responsiveness.css">  
+        <link rel="stylesheet" type="text/css" href="css/validation.css">
 	</head>
 	<body>
 		<div id="modal-window" class="modal-dialog">
@@ -17,14 +18,14 @@
             <img src="images/car-logo.png" class="modal-dialog__category-img" />
 		</div>
 
-		<div class="modal-dialog__form">
+		<form class="modal-dialog__form">
 			<div class="modal-dialog__section modal-dialog__section--1">
-				<label for="announcement-title">Title of announcement</label><input id="announcement-title" type="text" placeholder="Title of announcement" />
-				<label for="brand">Make/Brand</label><select id="brand"></select>
+				<label for="announcement-title">Title of announcement</label><input id="announcement-title" class="modal-dialog__section__input" type="text" placeholder="Title of announcement" required/>
+				<label for="brand">Make/Brand</label><select id="brand" class="modal-dialog__section__input" required></select>
                 <img src="" class="modal-dialog__brand-logo" />
-				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" type="text" placeholder="2015" />
-				<label for="mileage">Mileage</label><input id="mileage" type="text" placeholder="1000" />
-				<label for="fuel-type">Fuel type</label><select id="fuel-type">
+				<label for="manufacturing-year">Manufacturing year</label><input id="manufacturing-year" class="modal-dialog__section__input" type="text" placeholder="Manufacturing year" required/>
+				<label for="mileage">Mileage</label><input id="mileage" class="modal-dialog__section__input" type="text" placeholder="Mileage" required/>
+				<label for="fuel-type">Fuel type</label><select id="fuel-type" class="modal-dialog__section__input" required>
 					<option value="battery-e">Battery Electric</option>
 					<option value="hybrid-pi">Plug-in Hybrid</option>
 					<option value="hybrid-e">Hybrid Electric</option>
@@ -37,28 +38,28 @@
 					<option value="gasoline">Gasoline</option>
 					<option value="diesel" selected>Diesel</option>
 				</select>
-				<label for="color">Color</label><input id="color" type="text" class="modal-dialog__color-input" onInput="pickColor();" placeholder="car color" />
+				<label for="color">Color</label><input id="color" class="modal-dialog__section__input modal-dialog__color-input" type="text" onInput="pickColor();" placeholder="car color" required/>
 				<svg width="20" height="20" class="modal-dialog__color-preview">	  
 				  <rect width="20" height="20" class="color-square"/>
 				</svg>
 			</div>
 			<div class="modal-dialog__section modal-dialog__section--2">
-				<label for="vehicle-damaged">Vehicle damaged</label><input id="vehicle-damaged" type="checkbox" />
-				<label for="damage-reason" class="modal-dialog__damage-details">Please suply more details</label><textarea id="damage-reason" rows="5" cols="30" spellcheck="true" class="modal-dialog__damage-details" placeholder="Damage details"></textarea>
-				<label for="price">Price</label><input id="price" type="text" placeholder="1000" />
-				<label for="currency">Currency</label><select id="currency">
+				<label for="vehicle-damaged">Vehicle damaged</label><input id="vehicle-damaged" class="modal-dialog__section__input" type="checkbox"  />
+				<label for="damage-reason" class="modal-dialog__damage-details">Please suply more details</label><textarea id="damage-reason" class="modal-dialog__damage-details modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Damage details"></textarea>
+				<label for="price">Price</label><input id="price" class="modal-dialog__section__input" type="text" placeholder="Price" required/>
+				<label for="currency">Currency</label><select id="currency" class="modal-dialog__section__input" required>
 					<option value="usd">USD</option>
 					<option value="eur" selected>EUR</option>
 					<option value="gbp">GBP</option>
 					<option value="ron">RON</option>
 				</select>
-				<label for="vehicle-description">Description</label><textarea id="vehicle-description" rows="5" cols="30" spellcheck="true" placeholder="Description"></textarea>
+				<label for="vehicle-description">Description</label><textarea id="vehicle-description" class="modal-dialog__section__input" rows="5" cols="30" spellcheck="true" placeholder="Description" required></textarea>
 			</div>
-		</div>
-        <div class="modal-dialog__footer">
-            <span class="modal-dialog__button modal-dialog__button--save" />Save</span>
-            <span class="modal-dialog__button modal-dialog__button--cancel" />Cancel</span>
-        </div>
+            <div class="modal-dialog__footer">
+                <input type="submit" value="Save" class="modal-dialog__button modal-dialog__button--save" />
+                <span class="modal-dialog__button modal-dialog__button--cancel" />Cancel</span>
+            </div>
+		</form>
 
 		</div>
 

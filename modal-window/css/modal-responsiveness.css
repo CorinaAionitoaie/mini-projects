@@ -23,20 +23,23 @@
     .modal-dialog__form {
         padding: 10px 0;
     }
-    .modal-dialog__section input, 
-    .modal-dialog__section select, 
-    .modal-dialog__section textarea {
+    
+    .modal-dialog__section__input {
         margin-left: 10px;
         float: left;
         display: inline-block;
     }
     
-    #damage-reason, label[for="damage-reason"] {
+    .modal-dialog__color-preview {
+        width: 20px;
+    }
+    
+    .modal-dialog__damage-details, label[for="damage-reason"] {
         display: none;
     }
     
-    .modal-dialog__color-preview {
-        width: 20px;
+    #vehicle-damaged:checked ~ .modal-dialog__damage-details  {
+        display: block;
     }
 }
 
